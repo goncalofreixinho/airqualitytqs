@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>AirQuality</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900|Raleway" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../resources/static/css/bootstrap.css" th:href="@{/css/bootstrap.css}">
+    <link rel="stylesheet" href="../../resources/static/css/animate.css" th:href="@{/css/animate.css}">
+    <link rel="stylesheet" href="../../resources/static/css/owl.carousel.min.css" th:href="@{/css/owl.carousel.min.css}">
+
+    <link rel="stylesheet" href="../../resources/static/fonts/ionicons/css/ionicons.min.css" th:href="@{/fonts/ionicons/css/ionicons.min.css}">
+    <link rel="stylesheet" href="../../resources/static/fonts/fontawesome/css/font-awesome.min.css" th:href="@{/fonts/fontawesome/css/font-awesome.min.css}">
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="../../resources/static/css/style.css" th:href="@{/css/style.css}">
+  </head>
+  <body>
+    
+    <header role="banner">
+     
+      <nav class="navbar navbar-expand-md navbar-dark bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="airquality.html">AirQuality</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse navbar-light" id="navbarsExample05">
+            <ul class="navbar-nav ml-auto pl-lg-5 pl-0">
+              <li class="nav-item">
+                <a class="nav-link active" href="airquality.html">Home</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- END header -->
+
+    <section class="site-hero overlay" >
+      <div class="container">
+        <div class="row align-items-center site-hero-inner justify-content-center">
+          <div class="col-md-8 text-center">
+
+            </ul><div class="mb-5 element-animate">
+              <h1>Find the air quality!</h1>
+
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END section -->
+
+    <section class="submit-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center" style="margin-top: 60px">
+            <form class="example" th:action="@{/choosecity}" method="post">
+              <input type="text" placeholder="Search for your city.." name="city" th:value="*{city}" >
+              <button type="submit">
+              <i class="fa fa-search"></i>
+              </button>
+            </form>
+    </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+    <section class="site-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center">
+            <h2>Air Quality Details!</h2>
+            <p>It is possible to find the air conditions in several cities/regions around the world!</p>
+          </div>
+        </div>
+        <div class="row top-destination">
+          <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+            <a href="#" class="place">
+              <img src="../../resources/static/images/img_1.jpg" th:src="@{/images/img_1.jpg}" alt="Image placeholder">
+              <h2>Trogir, Croatia</h2>
+
+            </a>
+          </div>
+          <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+            <a href="#" class="place">
+              <img src="../../resources/static/images/img_2.jpg" th:src="@{/images/img_2.jpg}" alt="Image placeholder">
+              <h2>Stockton Beach, Australia</h2>
+
+            </a>
+          </div>
+          <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+            <a href="#" class="place">
+              <img src="../../resources/static/images/img_3.jpg" th:src="@{/images/img_3.jpg}" alt="Image placeholder">
+              <h2>Desert, Morocco</h2>
+
+            </a>
+          </div>
+          <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+            <a href="#" class="place">
+              <img src="../../resources/static/images/img_4.jpg" th:src="@{/images/img_4.jpg}" alt="Image placeholder">
+              <h2>Taj Mahal, India</h2>
+
+            </a>
+          </div>
+          <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+            <a href="#" class="place">
+              <img src="../../resources/static/images/img_5.jpg" th:src="@{/images/img_5.jpg}" alt="Image placeholder">
+              <h2>Eiffel Tower, France</h2>
+
+            </a>
+          </div>
+          <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+            <a href="#" class="place">
+              <img src="../../resources/static/images/img_6.jpg" th:src="@{/images/img_6.jpg}" alt="Image placeholder">
+              <h2>Opera House, Australia</h2>
+
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END section -->
+
+
+    <h1 style="color:#bbbbbb" th:text="${city_name}"></h1>
+    <div class="row">
+
+      <div class="col-md-4 float-shadow" >
+        <div class="weather-table-container">
+          <div class="weather-table-body">
+            <div class="weather-table-row weather-description" >Air Quality Index</div>
+            <div class="weather-table-row" >
+              <p class="airquality_units" th:text="${aqi}"> °C</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 float-shadow" >
+        <div class="weather-table-container">
+          <div class="weather-table-body">
+            <div class="weather-table-row weather-description" >Concentration of surface O3</div>
+            <div class="weather-table-row" >
+              <p class="airquality_units" th:text="${o3}"> </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 float-shadow" >
+        <div class="weather-table-container">
+          <div class="weather-table-body">
+            <div class="weather-table-row weather-description" >Concentration of surface SO2</div>
+            <div class="weather-table-row" >
+              <p class="airquality_units" th:text="${so2}"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 float-shadow" >
+        <div class="weather-table-container">
+          <div class="weather-table-body">
+            <div class="weather-table-row weather-description" >Concentration of surface NO2</div>
+            <div class="weather-table-row" >
+              <p class="airquality_units" th:text="${no2}"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 float-shadow" >
+        <div class="weather-table-container">
+          <div class="weather-table-body">
+            <div class="weather-table-row weather-description" >Concentration of carbon monoxide</div>
+            <div class="weather-table-row" >
+              <p class="airquality_units" th:text="${co}"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 float-shadow" >
+        <div class="weather-table-container">
+          <div class="weather-table-body">
+            <div class="weather-table-row weather-description" >Concentration of particulate matter < 2.5 microns</div>
+            <div class="weather-table-row" >
+              <p class="airquality_units" th:text="${pm25}"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 float-shadow" >
+        <div class="weather-table-container">
+          <div class="weather-table-body">
+            <div class="weather-table-row weather-description" >Concentration of particulate matter < 10 microns</div>
+            <div class="weather-table-row" >
+              <p class="airquality_units" th:text="${pm10}"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 float-shadow" >
+        <div class="weather-table-container">
+          <div class="weather-table-body">
+            <div class="weather-table-row weather-description" >Tree pollen level</div>
+            <div class="weather-table-row" >
+              <p class="airquality_units" th:text="${pollen_level_tree}"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 float-shadow" >
+        <div class="weather-table-container">
+          <div class="weather-table-body">
+            <div class="weather-table-row weather-description" >Grass pollen level</div>
+            <div class="weather-table-row" >
+              <p class="airquality_units"  th:text="${pollen_level_grass}"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 float-shadow" >
+        <div class="weather-table-container">
+          <div class="weather-table-body">
+            <div class="weather-table-row weather-description" >Weed pollen level </div>
+            <div class="weather-table-row" >
+              <p class="airquality_units"  th:text="${pollen_level_weed}"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 float-shadow" >
+        <div class="weather-table-container">
+          <div class="weather-table-body">
+            <div class="weather-table-row weather-description" >Mold Level</div>
+            <div class="weather-table-row" >
+              <p class="airquality_units" th:text="${mold_level}"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 float-shadow" >
+        <div class="weather-table-container">
+          <div class="weather-table-body">
+            <div class="weather-table-row weather-description" >Predominant pollen type</div>
+            <div class="weather-table-row" >
+              <p class="airquality_units"  th:text="${predominant_pollen_type}"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- loader -->
+
+    <script src="../../resources/static/js/jquery-3.2.1.min.js" th:href="@{/js/jquery-3.2.1.min.js}"></script>
+    <script src="../../resources/static/js/jquery-migrate-3.0.0.js" th:href="@{/js/jquery-migrate-3.0.0.js}"></script>
+    <script src="../../resources/static/js/popper.min.js" th:href="@{/js/popper.min.js}"></script>
+    <script src="../../resources/static/js/bootstrap.min.js" th:href="@{/js/bootstrap.min.js}"></script>
+    <script src="../../resources/static/js/owl.carousel.min.js" th:href="@{/js/owl.carousel.min.js}"></script>
+    <script src="../../resources/static/js/jquery.waypoints.min.js" th:href="@{/js/jquery.waypoints.min.js}"></script>
+    <script src="../../resources/static/js/jquery.stellar.min.js" th:href="@{/js/jquery.stellar.min.js}"></script>
+
+
+  </body>
+</html>

@@ -1,0 +1,141 @@
+{
+  "id": "f6a13736-c382-41ec-b3e9-99a99f70f0a6",
+  "version": "2.0",
+  "name": "airqualitytqs",
+  "url": "http://localhost:8080",
+  "tests": [{
+    "id": "1d9c1594-3e51-4493-834b-84c31235d118",
+    "name": "SeliniumTest",
+    "commands": [{
+      "id": "4aa1f0ae-a945-42e8-a47d-873764f1470a",
+      "comment": "",
+      "command": "open",
+      "target": "/airquality/Porto",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3537cedd-8c8e-4bb7-a84e-a423fcc1e727",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1853x1025",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2d558f26-b827-41a2-af62-b630ac6a2743",
+      "comment": "",
+      "command": "click",
+      "target": "name=city",
+      "targets": [
+        ["name=city", "name"],
+        ["css=input", "css:finder"],
+        ["xpath=//input[@name='city']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b39ec8fb-ffe2-4d19-a26e-05b2463c61c9",
+      "comment": "",
+      "command": "type",
+      "target": "name=city",
+      "targets": [
+        ["name=city", "name"],
+        ["css=input", "css:finder"],
+        ["xpath=//input[@name='city']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Aveiro"
+    }, {
+      "id": "4b35ae5e-08bd-496e-867f-8997f3706eb2",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=city",
+      "targets": [
+        ["name=city", "name"],
+        ["css=input", "css:finder"],
+        ["xpath=//input[@name='city']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "39c66b6c-c60e-4bad-966e-8d4e92f77e95",
+      "comment": "",
+      "command": "click",
+      "target": "name=city",
+      "targets": [
+        ["name=city", "name"],
+        ["css=input", "css:finder"],
+        ["xpath=//input[@name='city']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "482852ca-870c-4c7e-ad3d-8497bc64d87e",
+      "comment": "",
+      "command": "type",
+      "target": "name=city",
+      "targets": [
+        ["name=city", "name"],
+        ["css=input", "css:finder"],
+        ["xpath=//input[@name='city']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "New York"
+    }, {
+      "id": "b3269cf5-9037-4091-9868-e2ca87b9f00c",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=city",
+      "targets": [
+        ["name=city", "name"],
+        ["css=input", "css:finder"],
+        ["xpath=//input[@name='city']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "38377ec3-61b5-40a7-9530-daf520be9955",
+      "comment": "",
+      "command": "click",
+      "target": "name=city",
+      "targets": [
+        ["name=city", "name"],
+        ["css=input", "css:finder"],
+        ["xpath=//input[@name='city']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fc8857d4-3081-469d-91bd-f17f631b957c",
+      "comment": "",
+      "command": "type",
+      "target": "name=city",
+      "targets": [
+        ["name=city", "name"],
+        ["css=input", "css:finder"],
+        ["xpath=//input[@name='city']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Lisbon"
+    }, {
+      "id": "cbc3f0f7-507a-4440-95e7-14b3fa82e9d9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fa",
+      "targets": [
+        ["css=.fa", "css:finder"],
+        ["xpath=//i", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "0890a2df-5752-4724-aef0-f9b428dcf594",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["1d9c1594-3e51-4493-834b-84c31235d118"]
+  }],
+  "urls": [],
+  "plugins": []
+}
